@@ -1,0 +1,52 @@
+<section ng-controller="CreateCustomerController">
+	<acad-sidebar></acad-sidebar>
+
+	<acad-content>
+		<acad-topbar></acad-topbar>
+		<acad-titlebar title="Cadastrar aluno"></acad-titlebar>
+
+		<div class="content">
+
+			<acad-form 
+				title="'Detalhes do novo aluno'"
+				save-method="this.create()"
+				cancel-method="this.cancel()">
+
+				<acad-input-text 
+					model="this.customer.firstName" 
+					label="'Nome'"
+					validator="this.validateFirstName(this.customer.firstName || '')"
+					error-text="'Nome obrigatório'">
+				</acad-input-text>
+
+				<acad-input-text 
+					model="this.customer.lastName" 
+					label="'Sobrenome'"
+					validator="this.validateLastName(this.customer.lastName || '')"
+					error-text="'Sobrenome obrigatório'">
+				</acad-input-text>
+
+				<acad-input-text 
+					model="this.customer.email" 
+					label="'E-mail'"
+					validator="this.validateEmail(this.customer.email || '')"
+					error-text="'E-mail válido obrigatório'">
+				</acad-input-text>
+
+				<acad-input-password 
+					model="this.customer.password" 
+					label="'Senha'"
+					validator="this.validatePassword(this.customer.password || '')"
+					error-text="'Senha obrigatória'">
+				</acad-input-password>
+
+				<acad-input-password 
+					model="this.customer.repeatedPassword" 
+					label="'Repita a senha'"
+					validator="this.validateRepeatedPassword(this.customer.repeatedPassword)"
+					error-text="'As senhas não conferem'">
+				</acad-input-password>
+			</acad-form>
+		</div>
+	</acad-content>
+</section>

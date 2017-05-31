@@ -1,0 +1,25 @@
+{
+  "name": "scarpelli-brasil",
+  "description": "A system created by Lustrel",
+  "main": "index.js",
+  "authors": [
+    "Stanley Sathler <stanley@lustrel.com.br>"
+  ],
+  "license": "ISC",
+  "homepage": "http://www.scarpellibrasil.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "reset-css": "^2.2.0",
+    "components-font-awesome": "^4.7.0",
+    "angular-route": "^1.6.2",
+    "jquery": "^3.1.1"
+  }
+}

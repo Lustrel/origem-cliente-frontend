@@ -1,0 +1,12 @@
+<nav class="acad-sidebar" ng-controller="AcadSidebarController">
+	<div>
+		<img src="http://webapplayers.com/inspinia_admin-v2.7/img/profile_small.jpg"><!-- Picture --></img>
+		<span class="name">Stanley Sathler</span>
+		<span class="position">Web Developer <i class="arrow"></i></span>
+	</div>
+	<ul>
+		<a ng-repeat="item in menu" href="{{ item.link }}">
+			<li ng-class="{ 'active': this.isActive(item) }">{{ item.text }}</li>
+		</a>
+	</ul>
+</nav>

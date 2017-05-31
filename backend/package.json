@@ -1,0 +1,24 @@
+{
+  "name": "scarpelli-brasil",
+  "version": "1.0.0",
+  "description": "A system build by Lustrel",
+  "main": "run-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lustrel/scarpelli-brasil.git"
+  },
+  "author": "Stanley Sathler <stanley@lustrel.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lustrel/scarpelli-brasil/issues"
+  },
+  "homepage": "https://github.com/Lustrel/scarpelli-brasil#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.4"
+  }
+}

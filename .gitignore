@@ -1,0 +1,11 @@
+# Bower dependencies
+**/bower_components
+
+# Node dependencies
+**/node_modules
+
+# Sass cache
+**/.sass-cache
+
+# Dist files
+frontend/dist

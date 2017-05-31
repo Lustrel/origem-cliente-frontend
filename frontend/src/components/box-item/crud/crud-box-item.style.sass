@@ -1,0 +1,68 @@
+acad-crud-box-item
+	
+	table
+		border: 1px solid #e7e7e7
+		width: 100%
+
+	thead
+		background-color: #f5f5f6
+		text-align: left
+		font-weight: 700
+
+	tr
+		border-bottom: 1px solid #e7eaec
+
+	tr:last-child:not(:nth-child(1))
+		border-bottom: none
+
+	td.actions
+		text-align: center
+		width: 155px
+
+	th, 
+	td
+		border: 1px solid #e7e7e7
+
+	th
+		padding: 13px 8px
+
+	td
+		line-height: 40px
+		padding: 0 8px
+		vertical-align: middle
+
+	div.divider
+		background: linear-gradient(90deg, $neutral-color 50%, $negative-color 50%)
+		display: inline-block
+		font-size: .78em
+		height: 30px
+		line-height: 30px
+		vertical-align: middle
+
+		span
+			+border-radius(100%)
+			background: white
+			padding: 3px
+
+	button
+		border: none
+		display: inline-block
+		color: white
+		font-size: .93em
+		height: 30px
+		line-height: 30px
+		text-align: center
+		vertical-align: middle
+		padding: 0 5px
+
+		&.edit
+			+border-left-radius(15px)
+			background-color: $neutral-color
+			padding-left: 12px
+			padding-right: 8px
+
+		&.delete
+			+border-right-radius(15px)
+			background-color: $negative-color
+			padding-left: 8px
+			padding-right: 12px

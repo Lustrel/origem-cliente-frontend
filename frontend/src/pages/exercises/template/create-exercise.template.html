@@ -1,0 +1,33 @@
+<section ng-controller="CreateExerciseController">
+	<acad-sidebar></acad-sidebar>
+
+	<acad-content>
+		<acad-topbar></acad-topbar>
+		<acad-titlebar title="Cadastrar exercício"></acad-titlebar>
+
+		<div class="content">
+
+			<acad-form 
+				title="'Detalhes do novo exercício'"
+				save-method="this.create()"
+				cancel-method="this.cancel()">
+
+				<acad-input-text 
+					model="this.exercise.name" 
+					label="'Nome'"
+					validator="this.validateName(this.exercise.firstName)"
+					error-text="'Nome obrigatório'">
+				</acad-input-text>
+
+				<acad-select
+					model="this.exercise.muscleGroup"
+					label="'Grupo muscular'"
+					data="this.muscleGroups"
+					description="'name'"
+					value="'id'">
+				</acad-select>
+
+			</acad-form>
+		</div>
+	</acad-content>
+</section>
