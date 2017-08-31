@@ -1,0 +1,16 @@
+<div class="acad-input-text" ng-init="this.anyError = false">
+	<label>{{ this.label }}</label>
+
+	<div>
+		<div 
+			ng-if="this.anyError" 
+			class="error">
+			{{ this.errorText || "Valor inválido" }}
+		</div>
+
+		<input 
+			ng-blur="this.anyError = !this.validator()" 
+			type="text" 
+			ng-model="this.model">
+	</div>
+</div>

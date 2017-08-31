@@ -1,0 +1,34 @@
+
+<acad-box-item
+	title="{{ title }}"
+	title-button="{ type: 'success', text: (this.addLabel || 'add'), click: this.addMethod }">
+
+	<table ng-controller="AcadCrudBoxItemController">
+
+		<thead>
+			<tr>
+				<th ng-repeat="column in this.columns" ng-bind="column.text"></th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-if="isThereNoData(data)">
+				<td colspan="{{ this.columns.length + 1 }}" ng-bind="this.noDataText"></td>
+			</tr>
+
+			<tr ng-repeat="item in this.data">
+				<td
+					ng-repeat="column in this.columns"
+					ng-bind="this.getColumnValue(item, column)">
+				</td>
+				<td class="actions">
+					<button class="edit" ng-click="this.editMethod({row: item})">{{ this.editLabel || 'edit' }}</button><!--
+					--><div class="divider"><span>ou</span></div><!--
+					--><button class="delete" ng-click="this.deleteMethod({row: item})">{{ this.deleteLabel || 'delete' }}</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</acad-box-item>
